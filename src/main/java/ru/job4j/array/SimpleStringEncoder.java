@@ -6,8 +6,7 @@ public class SimpleStringEncoder {
         char symbol = input.charAt(0);
         int counter = 1;
         for (int i = 1; i < input.length(); i++) {
-            char nextSymbol = input.charAt(i);
-            if (nextSymbol != symbol) {
+            if (input.charAt(i) != symbol) {
                 result += symbol;
                 if (counter > 1) {
                     result += counter;
@@ -16,7 +15,7 @@ public class SimpleStringEncoder {
             } else {
                 counter++;
             }
-            symbol = nextSymbol;
+            symbol = input.charAt(i);
         }
         result += symbol;
         if (counter > 1) {
