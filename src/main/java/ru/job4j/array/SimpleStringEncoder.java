@@ -11,11 +11,11 @@ public class SimpleStringEncoder {
                 if (counter > 1) {
                     result += counter;
                 }
+                symbol = input.charAt(i);
                 counter = 1;
             } else {
                 counter++;
             }
-            symbol = input.charAt(i);
         }
         result += symbol;
         if (counter > 1) {
